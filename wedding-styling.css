@@ -1,0 +1,572 @@
+  /* semantic elements
+<article>
+<aside> this is for side panels
+<details> this will house summary and will show more when summary item is clicked on
+<figcaption>
+<figure> 
+<footer>
+<header>
+<main>
+<mark>
+<nav>
+<section>
+<summary>
+<time>
+*/
+
+
+/* default title displays a centered responsive text title for the page 
+- there is also a secondary option for sizing for the element */
+.default-title1 {
+color: white;
+text-align: center;
+margin: .1em;
+padding: 0;
+justify-content: center;
+font-size: 5vw; 
+text-wrap: nowrap;
+font-weight: bold;
+display: flex;
+text-shadow:.1em .1em .1em black, .1em .1em .2em black, .1em .1em .5em black;
+}
+
+.default-title2 {
+color: white;
+text-align: center;
+margin: .1em;
+padding: 0;
+justify-content: center;
+font-size: 5vw; 
+text-wrap: nowrap;
+display: flex;
+text-shadow:.1em .1em .1em black, .1em .1em .2em black, .1em .1em .5em black;
+}
+
+
+/*section title 1 */
+.default-title3 {
+color: whitesmoke;
+padding: .5vw;
+margin:0;
+text-align: center;
+justify-content: center;
+font-size: 2.5vw; 
+text-wrap: nowrap;
+}
+
+/* section title 2 */
+.default-title4 {
+color: #265726;
+padding: 0;
+margin: 0;
+text-align: center;
+justify-content: center;
+font-size: 4vw; 
+text-wrap: nowrap;
+font-weight: bold;
+z-index: -4;
+}
+
+summary {
+  text-decoration: none!important;
+  list-style: none!important;
+  appearance: none!important;
+}
+
+
+section.column {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* used in NAV Bar */
+.table-grid1 {
+  display: flex;
+  flex-direction: row;
+}
+
+
+/* column containing all personnel */
+.table-grid2 {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  position: relative; 
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  padding: 2%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  align-self: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+
+
+
+.fitwindow-conservative {
+  position: relative;
+  display: block;
+  max-height: 100%; 
+  max-width: 100%;
+  z-index: -5;
+}
+
+img.personnel_photo {
+  border-radius:50%;
+  width: 15vw;
+  height: 15vw;
+  z-index: -5;
+  box-sizing: border-box;
+}
+
+img.personnel_photo-director {
+  border-radius:50%;
+  width: 18vw;
+  height: 18vw;
+  z-index: -5;
+  box-sizing: border-box;
+}
+
+ul.table-grid-row {
+  display: flex;
+  flex-direction: column;
+  padding: 2vw 0vw 2vw 0vw;
+  z-index: -5;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+ul.table-grid-row-director {
+  display: flex;
+  flex-direction: column;
+  padding: 2vw 0vw 2vw 0vw;
+  z-index: -5;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+li.table-grid-cell {
+  display: flex;
+  text-align: center;
+  color: #265726;
+  font-size: 2.5vw;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  text-wrap: nowrap;
+  padding: .5vw 1vw;
+  z-index: -5;
+  text-decoration: underline;
+  width: 25%;
+}
+
+li.table-grid-cell2 {
+  display: flex;
+  text-align: center;
+  color: black;
+  font-size: 2.5vw;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  text-wrap: nowrap;
+  padding: .5vw 1vw;
+  z-index: -5;
+  width: 25%;
+}
+
+/* when the screen gets particularly small it will 
+crush and scale down the elements and decrease the 
+font sizes */
+
+@media screen and (max-width: 600px) {
+  .default-title3 {
+    padding: .01em;
+    margin: .01em;
+  }
+  .button1 {
+    width: 95%;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+  }
+  .button1-details {
+    width:95% !important;
+  }
+  .button1-details[open] .details-content {
+    display: block;
+    width: 98%;
+  }
+
+  .table-grid1 {
+    flex-direction: column;
+  }
+
+
+  .table-grid-row {
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+  }
+
+  .topbar-img {
+    max-height: 10vh;
+  }
+}
+
+
+/* when the screen exceeds a certain size it will 
+spread out the elements and increase the font sizes */
+@media screen and (min-width: 601px) {
+  nav {
+    display: flex;
+    flex-direction: row;
+    position: relative !important;
+    max-height: 5vw;
+  }
+
+  .table-grid-row {
+    box-sizing: border-box;
+  }
+
+  section.column {
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+}
+
+/*navigation element containing all page directory buttons */
+nav {
+    display: flex;
+    font-size: 3vw;
+    background: #588458;
+    align-items: center;
+    justify-content:center;
+    position:relative;
+    height: fit-content;
+    z-index: 0;
+}
+
+
+/* buttons to link to other locations */
+.button1 {
+    padding: .5% 1% .5% 1%;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    text-wrap: nowrap;
+    cursor: pointer;
+    font-size: 2vw;
+    background: white;
+    color: #588458;
+    border-width: .05em;
+    width: fitcontent;
+    height: fit-content;
+    margin: .5%;
+    border-radius: .5em;
+    border-style: solid;
+    border-color:black;
+}
+
+.button1:hover {
+    padding: .5% 1% .5% 1%;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    text-wrap: nowrap;
+    cursor: pointer;
+    font-size: 2vw;
+    background: #458f4b;
+    border-width: .05em;
+    width: fitcontent;
+    height: fit-content;
+    margin: .5%;
+    border-radius: .5em;
+    border-style: solid;
+    border-color:black;
+    color: whitesmoke;
+    z-index: -1;
+}
+
+
+
+.button1:active {
+    padding: .5% 1% .5% 1%;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    text-wrap: nowrap;
+    cursor: pointer;
+    font-size: 2vw;
+    background: #458f4b;
+    border-width: .05em;
+    width: inherit;
+    height: fit-content;
+    margin: .5%;
+    border-radius: .5em;
+    border-style: solid;
+    border-color:black;
+}
+
+.button1-details {
+    padding: .5% 1% .5% 1%;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    text-wrap: nowrap;
+    cursor: pointer;
+    font-size: 2vw;
+    background: white;
+    color:  #458f4b;
+    border-radius: .5em;
+    width: fit-content;
+    height: fit-content;
+    margin: .5%;
+    border-width: .05em;
+    border-style: solid;
+    border-color:black;
+    display:inline-block;
+    position:relative;
+
+}
+
+.button1-details:hover {
+  background:#458f4b;
+  color:whitesmoke;
+}
+
+
+
+
+/* this is element of the "Resources" drop down menu - this is the element itself, not its content*/
+.details-content {
+  left: 0;
+  margin:0%;
+  background-color: rgba(234, 234, 234, 0.555);
+  border:black;
+  padding: .7em .3em .3em .3em;
+  border-radius: 0% .5em .5em .5em ;
+  border-width: .05em;
+  border-style: solid;
+  border-color:black;
+  width: max-content;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+  z-index: -2;
+  top:1em;
+  position:absolute;
+  cursor:default;
+}
+
+.button1-details[open] .details-content {
+  display: block;
+}
+
+.button1-details summary::-webkit-details-marker {
+  display:none;
+
+}
+
+.button2-details[open] .details-content {
+  display: block;
+}
+
+.button2-details summary::-webkit-details-marker {
+  display:block;
+
+}
+
+.nav-sub-button {
+  padding: .2em;
+  font-size: .9em;
+  background-color: white;
+  color: #265726;
+  border-style: solid;
+  border-width: .05em;
+  border-radius: .2em;
+  border-color:black;
+  margin: .2em;
+}
+
+.nav-sub-button:hover {
+  background: #458f4b;
+  color: whitesmoke;
+}
+
+
+.button2 {
+    padding: .5% 1% .5% 1%;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    text-wrap: nowrap;
+    cursor: pointer;
+    font-size: 3vw;
+    background: #265726;
+    color: whitesmoke;
+    border-radius: .2em;
+    width: fitcontent;
+    height: fit-content;
+    display:block;
+    margin: .5%;
+    border-width: .05em;
+    border-style: solid;
+    border-color:black;
+    align-content: center;
+    justify-content: center;
+}
+
+
+
+.button2:hover {
+    padding: .5% 1% .5% 1%;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    text-wrap: nowrap;
+    font-size: 3vw;
+    background: #458f4b;
+    border-radius: .2em;
+    width: fitcontent;
+    height: fit-content;
+    margin: .5%;
+    border-width: .05em;
+    border-style: solid;
+    border-color:black;
+    color: whitesmoke;
+    cursor:pointer;
+}
+
+.button2-details {
+    padding-top: .5%;
+    padding-bottom: .5%;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    text-wrap: nowrap;
+    cursor: pointer;
+    font-size: 2vw;
+    background:#265726;
+    color:whitesmoke;
+    border-radius: .5em;
+    margin: .5%;
+    border-width: .05em;
+    border-style: solid;
+    border-color:black;
+    width: 70%;
+    display:inline-block;
+}
+
+
+.details-content2 {
+  margin:0%;
+  background-color: rgba(255, 255, 255, 0.555);
+  border-color:black;
+  padding: .7em .3em .3em .3em;
+  border-radius: .5em .5em .5em .5em ;
+  border-width: .05em;
+  border-style: solid;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+  width: 80%;
+  position:absolute;
+  left:10%;
+  z-index: -1;
+}
+
+.details-content2:hover {
+  cursor: default;
+}
+
+.button2-details:hover {
+  background:#458f4b;
+  color:whitesmoke;
+  cursor:pointer;
+}
+
+.sub-button1 {
+  padding: .2em;
+  font-size: .9em;
+  background-color: white;
+  color: #265726;
+  border-style: solid;
+  border-width: .05em;
+  border-radius: .2em;
+  border-color:black;
+  margin: .2em;
+  cursor: pointer;
+}
+
+/* stylistic shapes */
+.rectangle1 {
+    margin-left: auto; 
+    margin-right: auto; 
+    height: 1em; 
+    background-color: #265726; 
+    border-radius: 50% !important;
+    width: 100%;
+    z-index: -5;
+}
+
+.rectangle2 {
+    margin-left: auto; 
+    margin-right: auto; 
+    height: .5vw; 
+    background-color: #265726; 
+    border-radius: 50vw !important;
+    width:80%;
+    z-index: -5;
+}
+
+details.personnel-regions {
+    margin: 1vw;
+    padding: 2vw;
+    border-radius: 3vw;
+    border-color: #265726;
+    color: #265726;
+    border-style: solid;
+    border-width: .6vw;
+    font-size: 2.5vw;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* why is this not working? 
+details.personnel-regions {
+  display:relative;
+  width: 75%;
+  height: fit-content;
+  font-size: 4vw;
+  font-weight: bolder;
+  border-style: solid;
+  border-width: .5vw;
+  border-radius: 5vw;
+  border-color: black;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  padding: 2%;
+  z-index: -5;
+  text-decoration: underline !important;
+  justify-content: center;
+
+}
+*/
+
+details.personnel-regions:hover {
+  box-shadow: 0vw 1vw 2vw rgba(0, 0, 0, 0.8) !important;
+}
+

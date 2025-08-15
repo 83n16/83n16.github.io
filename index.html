@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Wedding</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --sage-color: #9caf88;
+            --dusty-blue: #6b8ba4;
+            --tan-color: #f0e6dd;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fefefe;
+        }
+
+        header {
+            background: var(--dusty-blue);
+            text-align: center;
+            padding: 3rem 1rem;
+            margin-bottom: 2rem;
+            color: white;
+        }
+
+        h1, h2 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--dusty-blue);
+            border-bottom: 2px solid var(--sage-color);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+
+        nav {
+            background-color: var(--tan-color);
+            padding: 1rem 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        nav ul li a {
+            color: #5d4037;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        nav ul li a:hover {
+            color: var(--sage-color);
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--sage-color);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        nav ul li a:hover::after {
+            transform: scaleX(1);
+        }
+
+        section {
+            padding: 3rem 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            border-top: 1px solid var(--sage-color);
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .gallery img {
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            max-width: 300px;
+            height: auto;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: var(--dusty-blue);
+            margin-top: 2rem;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .gallery img {
+                flex: 1 1 100%;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Wedding</h1>
+        <p><placeholder for couple's names></p>
+        <p><placeholder for wedding date> at <placeholder for wedding location></p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#our-story">Our Story</a></li>
+            <li><a href="#wedding-details">Wedding Details</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#travel">Travel & Accommodations</a></li>
+            <li><a href="#registry">Registry</a></li>
+            <li><a href="#rsvp">RSVP</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#gallery">Photos & Videos</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <section id="home">
+        <h2>Home</h2>
+        <p><placeholder for welcome message></p>
+    </section>
+    <section id="our-story">
+        <h2>Our Story</h2>
+        <p><placeholder for how the couple met></p>
+        <p><placeholder for engagement story></p>
+        <div class="gallery">
+            <img src="<placeholder for image 1 URL>" alt="Our Story Image 1">
+            <img src="<placeholder for image 2 URL>" alt="Our Story Image 2">
+        </div>
+    </section>
+    <section id="wedding-details">
+        <h2>Wedding Details</h2>
+        <p>Ceremony: <a href="https://www.bing.com/search?q=antique+boat+museum+clayton+ny&cvid=dbf59c0e842d4fd88d409a1dd13e1b48&gs_lcrp=EgRlZGdlKgYIABBFGDsyBggAEEUYOzIGCAEQABhAMgYIAhAAGEAyBggDEAAYQDIGCAQQABhAMgYIBRAAGEAyBggGEAAYQDIGCAcQABhAMggICBDpBxj8VdIBCDU2MDFqMGo0qAIIsAIB&FORM=ANAB01&PC=U531" target="_blank">Antique Boat Museum - 750 Mary St, Clayton, NY 13624 </a></p>
+        <p>Reception: <a href="https://www.angelrock.com/cottagerentals/" target="_blank">Angelrock Country Cottages - 34311 NYS Rte 12E
+Cape Vincent, NY 13618 </a></p>
+        <p><placeholder for directions and maps></p>
+        <p><placeholder for parking information></p>
+    </section>
+    <section id="schedule">
+        <h2>Schedule of Events</h2>
+        <p><placeholder for wedding day timeline></p>
+        <p><placeholder for rehearsal dinner information></p>
+        <p><placeholder for post-wedding events></p>
+    </section>
+    <section id="travel">
+        <h2>Travel and Accommodations</h2>
+        <p><placeholder for hotel room blocks and booking information></p>
+        <p><placeholder for travel tips and local attractions></p>
+        <p><placeholder for transportation options></p>
+    </section>
+    <section id="registry">
+        <h2>Registry Information</h2>
+        <p><placeholder for links to gift registries></p>
+        <p><placeholder for information about charitable donations></p>
+    </section>
+    <section id="rsvp">
+        <h2>RSVP Information</h2>
+        <p>Please RSVP by <placeholder for RSVP deadline></p>
+        <p><placeholder for RSVP link or instructions></p>
+        <p><placeholder for contact information for questions></p>
+    </section>
+    <section id="faq">
+        <h2>FAQ</h2>
+        <p><placeholder for dress code information></p>
+        <p><placeholder for gift preferences></p>
+        <p><placeholder for information about children at the wedding></p>
+    </section>
+    <section id="gallery">
+        <h2>Photos and Videos</h2>
+        <div class="gallery">
+            <img src="<placeholder for image 1 URL>" alt="Gallery Image 1">
+            <img src="<placeholder for image 2 URL>" alt="Gallery Image 2">
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contact Information</h2>
+        <p>Email: <placeholder for email address></p>
+        <p>Phone: <placeholder for phone number></p>
+        <p><placeholder for social media links></p>
+    </section>
+    <footer>
+        <p>&copy; 2023 Our Wedding</p>
+    </footer>
+</body>
+</html>
